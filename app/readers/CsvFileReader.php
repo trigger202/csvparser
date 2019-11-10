@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\imports;
+namespace App\readers;
 
 
-use App\imports\Exceptions\CSVException;
+use App\readers\Exceptions\CSVException;
 
 class CsvFileReader implements FileReaderInterface
 {
@@ -17,9 +17,7 @@ class CsvFileReader implements FileReaderInterface
     /** @var array data */
     protected $data;
 
-    /** @var User[] invalidData */
-    private $invalidData;
-
+    /**@var string */
     const FILE_EXTENSION = 'csv';
 
     /**
@@ -51,15 +49,7 @@ class CsvFileReader implements FileReaderInterface
     /**
      * @throws CSVException
      */
-    public function parse()
-    {
-        $this->readFile();
-    }
-
-    /**
-     * @throws CSVException
-     */
-    private function readFile()
+    public function readFile()
     {
         if (!file_exists($this->file)) {
             throw new CSVException(sprintf(CSVException::ERROR_FILE_NOT_EXISTING, $this->file));
@@ -78,26 +68,16 @@ class CsvFileReader implements FileReaderInterface
 
         $rows = [];
         try {
-
             $header = fgetcsv($file);
             while ($row = fgetcsv($file)) {
                 $record = $this->combineKeysAndValues($header, $row);
-                try {
-                    $user = new User($record);
-                    dump($user->toJson());
-                    if ($user->validate()) {
-                        $rows[] = $record;
-                    }
-
-                } catch (\Exception  $e) {
-                    dump($e);
-                    $this->invalidData[] = $row;
-                }
+                $rows[] = $record;
             }
         } catch (\Exception $exception) {
             throw new CSVException(CSVException::ERROR_FAILED_TO_LOAD_DATA . $exception->getMessage());
+        } finally {
+            fclose($file);
         }
-        fclose($file);
 
         $this->data = $rows;
     }
@@ -106,25 +86,27 @@ class CsvFileReader implements FileReaderInterface
     {
         $result = array();
         foreach ($keys as $i => $key) {
-            $key = trim($key);
-            $result[$key] = trim($fields[$i]);
+            $newKey = trim($key);
+            $newField = isset($fields[$i]) ? trim($fields[$i]) : "";
+            if (trim($newField) === "") {
+                continue;
+            }
+            $result[$newKey] = $newField;
             unset($fields[$i]);
         }
-
         if ($addExtraFields === false) {
             return $result;
         }
+
         foreach ($fields as $index => $value) {
+            if (trim($value) === "") {
+                continue;
+            }
             $key = trim($value);
             $result[$key] = trim($value);
         }
 
         return $result;
-    }
-
-    public function convertToSnakeCase($key)
-    {
-        return trim(strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $key)));
     }
 
     /**
@@ -157,13 +139,5 @@ class CsvFileReader implements FileReaderInterface
     public function setHeader(array $header): void
     {
         $this->header = $header;
-    }
-
-    /**
-     * @return array
-     */
-    public function getInvalidData(): array
-    {
-        return $this->invalidData;
     }
 }

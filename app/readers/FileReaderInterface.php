@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\imports;
+namespace App\readers;
 
 
 interface FileReaderInterface
 {
-    public function parse();
+    public function readFile();
 
     public function setData($data);
 

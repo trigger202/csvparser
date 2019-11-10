@@ -1,6 +1,6 @@
 <?php
 
-namespace App\imports;
+namespace App\readers;
 
 use Illuminate\Support\Facades\Validator;
 
