@@ -16,6 +16,8 @@ class DataImportsController extends Controller
 
         $jsonWriter = new JsonWriter($data);
 
-        dd($jsonWriter->write());
+        $jsonWriter->write();
+
+        dd($jsonWriter);
     }
 }

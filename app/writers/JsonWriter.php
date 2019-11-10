@@ -71,9 +71,11 @@ class JsonWriter implements FileWriterInterface
                     $isValid = $user->validate();
                     if ($isValid) {
                         fwrite($validDataFile, $user->toJson());
+                        $this->successfulInsertCount++;
                     }
                 } catch (ValidationException  $e) {
                     fwrite($inValidDataFile, $user->toJson());
+                    $this->unsuccessFulInsertCount++;
                 }
             }
         } catch (\Exception $exception) {
