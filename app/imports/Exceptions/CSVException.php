@@ -4,7 +4,6 @@
 namespace App\imports\Exceptions;
 
 
-class CSVException
+class CSVException extends FileParserException
 {
-
 }
