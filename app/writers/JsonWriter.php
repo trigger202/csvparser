@@ -31,6 +31,33 @@ class JsonWriter implements FileWriterInterface
         $this->factory = $factory;
     }
 
+    public function write()
+    {
+        $validDataFile = fopen($this->getSuccessfulOutputFileName(), "a+");
+        $inValidDataFile = fopen($this->getErrorsOutputFileName(), "a+");
+
+        try {
+            foreach ($this->data as $row) {
+                $jsonableObject = $this->factory->create($this->className, $row);
+                if ($jsonableObject->validate()) {
+                    fwrite($validDataFile, $jsonableObject->toJson());
+                    $this->successfulInsertCount++;
+                } else {
+                    fwrite($inValidDataFile, implode(', ', $row));
+                    fwrite($inValidDataFile, PHP_EOL);
+                    $this->unsuccessFulInsertCount++;
+                }
+            }
+        } catch (\Exception $exception) {
+            throw new JsonFileWriterException(JsonFileWriterException::ERROR_FAILED_TO_LOAD_DATA . $exception->getMessage());
+        } finally {
+            fclose($validDataFile);
+            fclose($inValidDataFile);
+        }
+
+        return true;
+    }
+
     /**
      * @param string $successfulOutputFileName
      * @return JsonWriter
@@ -67,34 +94,6 @@ class JsonWriter implements FileWriterInterface
         return $this;
     }
 
-    public function write()
-    {
-        $validDataFile = fopen($this->getSuccessfulOutputFileName(), "a+");
-        $inValidDataFile = fopen($this->getErrorsOutputFileName(), "a+");
-
-        try {
-            foreach ($this->data as $row) {
-                $jsonableObject = $this->factory->create($this->className, $row);
-                if ($jsonableObject->validate()) {
-                    fwrite($validDataFile, $jsonableObject->toJson());
-                    $this->successfulInsertCount++;
-                } else {
-                    fwrite($inValidDataFile, implode(', ', $row));
-                    fwrite($inValidDataFile, PHP_EOL);
-                    $this->unsuccessFulInsertCount++;
-                }
-            }
-        } catch (\Exception $exception) {
-            throw new JsonFileWriterException(JsonFileWriterException::ERROR_FAILED_TO_LOAD_DATA . $exception->getMessage());
-        } finally {
-            fclose($validDataFile);
-            fclose($inValidDataFile);
-        }
-
-        return true;
-    }
-
-
     /**
      * @return int
      */
@@ -104,10 +103,10 @@ class JsonWriter implements FileWriterInterface
     }
 
     /**
-     * @param int
+     * @return int
      */
     public function getUnsuccessfulInsert()
     {
-        $this->unsuccessFulInsertCount;
+        return $this->unsuccessFulInsertCount;
     }
 }

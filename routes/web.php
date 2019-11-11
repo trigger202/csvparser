@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', 'DataImportsController@index');
+Route::get('/', function () {
+    return view('welcome');
+});

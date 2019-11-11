@@ -14,14 +14,35 @@ class JsonWriterTest extends TestCase
      * @var JsonWriter
      */
     private $jsonWriter;
+    /**
+     * @var JsonableObjectFactory|\PHPUnit\Framework\MockObject\MockObject
+     */
+    private $factory;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->data = ['ali' => 'fareh', 'role' => 'developer'];
+        $this->data = [['ali' => 'fareh', 'role' => 'developer']];
+        $this->factory = $this->createMock(JsonableObjectFactory::class);
+        $this->jsonWriter = new JsonWriter($this->data, User::class, $this->factory);
+    }
 
-        $this->jsonWriter = new JsonWriter($this->data, User::class, $this->createMock(JsonableObjectFactory::class));
+    public function testWriteWithGoodDataMustReturnZeroFailedInserts()
+    {
+        $user = $this->createMock(User::class);
+
+        $this->factory->expects($this->once())
+            ->method('create')
+            ->willReturn($user);
+        $user->expects($this->once())->method('validate')->willReturn(true);
+
+        $this->jsonWriter->write();
+
+        $this->assertEquals(1, $this->jsonWriter->getSuccessfulInsertCount());
+        $this->assertEquals(0, $this->jsonWriter->getUnsuccessfulInsert());
+        @unlink($this->jsonWriter->getSuccessfulOutputFileName());
+        @unlink($this->jsonWriter->getErrorsOutputFileName());
     }
 
     public function testGetAndSetSuccessfulOutputFileName()

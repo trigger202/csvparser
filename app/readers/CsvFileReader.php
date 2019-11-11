@@ -68,9 +68,9 @@ class CsvFileReader implements FileReaderInterface
 
         $rows = [];
         try {
-            $header = fgetcsv($file);
+            $this->setHeader(fgetcsv($file));
             while ($row = fgetcsv($file)) {
-                $record = $this->combineKeysAndValues($header, $row);
+                $record = $this->combineKeysAndValues($this->getHeader(), $row);
                 $rows[] = $record;
             }
         } catch (\Exception $exception) {
