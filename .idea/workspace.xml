@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22c74765-05e0-4647-8e42-deaf3a478205" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Json/JsonableObjects/ValidatorInterace.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DataImportsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DataImportsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Json/JsonableObjects/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Json/JsonableObjects/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Json/JsonableObjects/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Json/JsonableObjects/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/writers/JsonWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/writers/JsonWriter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/sample_users_errors.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/sample_users_errors.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/sample_users_successful.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/sample_users_successful.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +17,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4466951">
+    <splitter split-orientation="horizontal" split-proportion="0.39712155">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -53,15 +47,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="3" selection-end-line="75" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/Unit/ExampleTest.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
@@ -70,13 +55,13 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/writers/JsonWriter.php">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/Unit/JsonWriterTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="130">
-                  <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+                <state relative-caret-position="511">
+                  <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
                   <folding>
-                    <element signature="e#31#82#0#PHP" expanded="true" />
+                    <element signature="e#30#81#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -85,8 +70,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+                <state relative-caret-position="160">
+                  <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
                   <folding>
                     <element signature="e#30#64#0#PHP" expanded="true" />
                   </folding>
@@ -94,11 +79,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                <state relative-caret-position="160">
+                  <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -108,6 +93,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="318">
                   <caret line="314" column="36" selection-start-line="314" selection-start-column="20" selection-end-line="314" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectFactory.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -131,8 +125,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/User.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="80">
-                  <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+                <state relative-caret-position="360">
+                  <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -149,11 +143,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="58" selection-start-line="58" selection-end-line="58" />
+                <state relative-caret-position="-229">
+                  <caret line="15" column="11" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -167,20 +161,32 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/writers/JsonWriter.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="331">
-                  <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+                <state relative-caret-position="297">
+                  <caret line="69" column="25" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#31#82#0#PHP" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/ValidatorInterace.php">
+            <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
                   <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/Profile.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -199,15 +205,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
                   <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="235" column="71" selection-start-line="235" selection-start-column="40" selection-end-line="235" selection-end-column="71" />
                 </state>
               </provider>
             </entry>
@@ -252,7 +249,6 @@
         <option value="$PROJECT_DIR$/app/writers/JsonableInteface.php" />
         <option value="$PROJECT_DIR$/app/readers/User.php" />
         <option value="$PROJECT_DIR$/app/Json/JsonableObjects/JsonableInteface.php" />
-        <option value="$PROJECT_DIR$/app/writers/JsonWriter.php" />
         <option value="$PROJECT_DIR$/app/Json/JsonableObjects/Profile.php" />
         <option value="$PROJECT_DIR$/app/readers/sample_users.csv" />
         <option value="$PROJECT_DIR$/public/sample_users_successful.json" />
@@ -264,10 +260,12 @@
         <option value="$PROJECT_DIR$/tests/Unit/UserTest.php" />
         <option value="$PROJECT_DIR$/app/Json/JsonableObjects/ValidatorInterace.php" />
         <option value="$PROJECT_DIR$/tests/stubs/Validator.php" />
-        <option value="$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php" />
         <option value="$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php" />
-        <option value="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/JsonWriterTest.php" />
+        <option value="$PROJECT_DIR$/app/writers/JsonWriter.php" />
       </list>
     </option>
   </component>
@@ -394,13 +392,6 @@
               <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
               <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Json" type="462c0819:PsiDirectoryNode" />
-              <item name="JsonableObjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="readers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -465,25 +456,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.AbstractJsonableObjectTest.testConvertToSnakeCase">
-    <configuration name="AbstractJsonableObjectTest.testConvertToSnakeCase" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AbstractJsonableObjectTest" file="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" method="testConvertToSnakeCase" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.JsonWriterTest.testGetUnsuccessfulInsert">
+    <configuration name="JsonWriterTest.testGetAndSetErrorsOutputFileName" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\JsonWriterTest" file="$PROJECT_DIR$/tests/Unit/JsonWriterTest.php" method="testGetAndSetErrorsOutputFileName" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="AbstractJsonableObjectTest.testExample" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AbstractJsonableObjectTest" file="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" method="testExample" scope="Method" />
+    <configuration name="JsonWriterTest.testGetErrorsOutputFileName" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\JsonWriterTest" file="$PROJECT_DIR$/tests/Unit/JsonWriterTest.php" method="testGetErrorsOutputFileName" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="AbstractJsonableObjectTest.testGetData" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AbstractJsonableObjectTest" file="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" method="testGetData" scope="Method" />
+    <configuration name="JsonWriterTest.testGetSuccessfulInsertCount" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\JsonWriterTest" file="$PROJECT_DIR$/tests/Unit/JsonWriterTest.php" method="testGetSuccessfulInsertCount" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="AbstractJsonableObjectTest.testToJson" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AbstractJsonableObjectTest" file="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" method="testToJson" scope="Method" />
+    <configuration name="JsonWriterTest.testGetUnsuccessfulInsert" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\JsonWriterTest" file="$PROJECT_DIR$/tests/Unit/JsonWriterTest.php" method="testGetUnsuccessfulInsert" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="AbstractJsonableObjectTest.testValidate" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AbstractJsonableObjectTest" file="$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php" method="testValidate" scope="Method" />
+    <configuration name="JsonWriterTest.testSetSuccessfulOutputFileName" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\JsonWriterTest" file="$PROJECT_DIR$/tests/Unit/JsonWriterTest.php" method="testSetSuccessfulOutputFileName" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -492,11 +483,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.AbstractJsonableObjectTest.testConvertToSnakeCase" />
-        <item itemvalue="PHPUnit.AbstractJsonableObjectTest.testValidate" />
-        <item itemvalue="PHPUnit.AbstractJsonableObjectTest.testToJson" />
-        <item itemvalue="PHPUnit.AbstractJsonableObjectTest.testGetData" />
-        <item itemvalue="PHPUnit.AbstractJsonableObjectTest.testExample" />
+        <item itemvalue="PHPUnit.JsonWriterTest.testGetUnsuccessfulInsert" />
+        <item itemvalue="PHPUnit.JsonWriterTest.testGetSuccessfulInsertCount" />
+        <item itemvalue="PHPUnit.JsonWriterTest.testGetAndSetErrorsOutputFileName" />
+        <item itemvalue="PHPUnit.JsonWriterTest.testSetSuccessfulOutputFileName" />
+        <item itemvalue="PHPUnit.JsonWriterTest.testGetErrorsOutputFileName" />
       </list>
     </recent_temporary>
   </component>
@@ -518,51 +509,51 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 22m 57s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testSetSuccessfulOutputFileName - 2019.11.11 at 21h 57m 39s.xml">
+      <configuration name="JsonWriterTest.testSetSuccessfulOutputFileName" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 23m 36s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testSetSuccessfulOutputFileName - 2019.11.11 at 21h 59m 07s.xml">
+      <configuration name="JsonWriterTest.testSetSuccessfulOutputFileName" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 25m 44s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testGetErrorsOutputFileName - 2019.11.11 at 21h 59m 46s.xml">
+      <configuration name="JsonWriterTest.testGetErrorsOutputFileName" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 29m 08s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testGetErrorsOutputFileName - 2019.11.11 at 22h 01m 21s.xml">
+      <configuration name="JsonWriterTest.testGetErrorsOutputFileName" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 29m 40s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testSetSuccessfulOutputFileName - 2019.11.11 at 22h 01m 26s.xml">
+      <configuration name="JsonWriterTest.testSetSuccessfulOutputFileName" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 31m 43s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testSetSuccessfulOutputFileName - 2019.11.11 at 22h 02m 11s.xml">
+      <configuration name="JsonWriterTest.testSetSuccessfulOutputFileName" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 33m 22s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testSetSuccessfulOutputFileName - 2019.11.11 at 22h 02m 29s.xml">
+      <configuration name="JsonWriterTest.testSetSuccessfulOutputFileName" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 33m 35s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testGetAndSetErrorsOutputFileName - 2019.11.11 at 22h 03m 00s.xml">
+      <configuration name="JsonWriterTest.testGetAndSetErrorsOutputFileName" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testValidate - 2019.11.11 at 21h 35m 42s.xml">
-      <configuration name="AbstractJsonableObjectTest.testValidate" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testGetSuccessfulInsertCount - 2019.11.11 at 22h 04m 16s.xml">
+      <configuration name="JsonWriterTest.testGetSuccessfulInsertCount" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="AbstractJsonableObjectTest_testConvertToSnakeCase - 2019.11.11 at 21h 35m 47s.xml">
-      <configuration name="AbstractJsonableObjectTest.testConvertToSnakeCase" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="JsonWriterTest_testGetUnsuccessfulInsert - 2019.11.11 at 22h 04m 36s.xml">
+      <configuration name="JsonWriterTest.testGetUnsuccessfulInsert" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41026000" />
+    <option name="totallyTimeSpent" value="41777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17537314" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17537314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -689,13 +680,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableInteface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableInteface.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
@@ -720,13 +705,6 @@
     <entry file="file://$PROJECT_DIR$/public/sample_users_successful.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/JsonableObjectFactoryTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -734,13 +712,6 @@
           <folding>
             <element signature="e#30#81#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/Profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -755,16 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/writers/JsonWriter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-          <folding>
-            <element signature="e#31#82#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/ExampleTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/ValidatorInterace.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -820,13 +774,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/stubs/Validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/stubs/Validator.php" />
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Validator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
@@ -868,41 +816,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="160">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="-229">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/ExampleTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/AbstractJsonableObjectTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="160">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="e#30#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/tests/Unit/JsonWriterTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="511">
+          <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
+          <folding>
+            <element signature="e#30#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/writers/JsonWriter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="69" column="25" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="25" />
+          <folding>
+            <element signature="e#31#82#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

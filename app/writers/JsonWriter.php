@@ -98,8 +98,7 @@ class JsonWriter implements FileWriterInterface
     /**
      * @return int
      */
-    public
-    function getSuccessfulInsertCount(): int
+    public function getSuccessfulInsertCount(): int
     {
         return $this->successfulInsertCount;
     }
@@ -107,8 +106,7 @@ class JsonWriter implements FileWriterInterface
     /**
      * @param int
      */
-    public
-    function getUnsuccessfulInsert()
+    public function getUnsuccessfulInsert()
     {
         $this->unsuccessFulInsertCount;
     }
