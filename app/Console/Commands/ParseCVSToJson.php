@@ -46,20 +46,23 @@ class ParseCVSToJson extends Command
         $filePath = $this->argument('file');
 
         if (file_exists($filePath) === false) {
-            $this->error("File does not exist");
+            $this->error("File does not exist " . $filePath);
             exit();
         }
 
-        $csvReader = new CsvFileReader($filePath);
-        $csvReader->readFile();
-        $data = $csvReader->getData();
-        $jsonWriter = new JsonWriter($data, User::class, new JsonableObjectFactory());
-        $jsonWriter->write();
-        $this->info("Total successful inserts " . $jsonWriter->getSuccessfulInsertCount());
-        $this->info("Total errors " . $jsonWriter->getUnsuccessfulInsert());
-        $this->info("Please see " . $jsonWriter->getSuccessfulOutputFileName());
-        $this->info("Total errors " . $jsonWriter->getUnsuccessfulInsert());
-
+        try {
+            $csvReader = new CsvFileReader($filePath);
+            $csvReader->readFile();
+            $data = $csvReader->getData();
+            $jsonWriter = new JsonWriter($data, User::class, new JsonableObjectFactory());
+            $jsonWriter->write();
+            $this->info("Total successful inserts " . $jsonWriter->getSuccessfulInsertCount());
+            $this->info("Total errors " . $jsonWriter->getUnsuccessfulInsert());
+            $this->info("Please see " . $jsonWriter->getSuccessfulOutputFileName());
+            $this->info("Total errors " . $jsonWriter->getUnsuccessfulInsert());
+        } catch (\Exception $e) {
+            $this->error("Woops something went wrong while parsing the file");
+        }
 
 
     }
