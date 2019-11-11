@@ -12,6 +12,15 @@
 5. run ``php artisan csv:json``
 6. Done
 
+# Code to review location
+I have created the following folders under app/
+    - json/
+        - JsonableObjects
+    - readers/
+    - writers/
+
+# Output json files
+You will find the output files in the project root; in the same level as .env and phpunit.xml file.
 ## Unit Tests
 
 run ``./vedor/bin/phpunit``

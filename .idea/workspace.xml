@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22c74765-05e0-4647-8e42-deaf3a478205" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Json/JsonableObjects/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Json/JsonableObjects/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/readers/sample_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/readers/sample_users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Json/JsonableObjects/ValidatorInterace.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sample_users_errors.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_users_errors.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample_users_successful.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_users_successful.json" afterDir="false" />
     </list>
@@ -17,7 +18,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.9">
+    <splitter split-orientation="horizontal" split-proportion="0.7073561">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -25,15 +26,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="280">
                   <caret line="14" column="63" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="63" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/filesystems.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -55,7 +47,7 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sample_users_successful.json">
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
@@ -63,8 +55,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+                <state relative-caret-position="595">
+                  <caret line="61" selection-start-line="61" selection-end-line="63" selection-end-column="90" />
                   <folding>
                     <element signature="e#40#91#0#PHP" expanded="true" />
                   </folding>
@@ -73,11 +65,16 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sample_users_errors.json">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="400">
-                    <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+                  <first_editor relative-caret-position="440">
+                    <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -144,13 +141,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-229">
-                  <caret line="15" column="11" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="11" />
+                <state relative-caret-position="160">
+                  <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/readers/CsvFileReader.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="290">
@@ -183,7 +180,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
@@ -258,11 +255,12 @@
         <option value="$PROJECT_DIR$/app/writers/JsonWriter.php" />
         <option value="$PROJECT_DIR$/tests/Unit/JsonWriterTest.php" />
         <option value="$PROJECT_DIR$/app/readers/CsvFileReader.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/Json/JsonableObjects/User.php" />
         <option value="$PROJECT_DIR$/app/readers/sample_users.csv" />
         <option value="$PROJECT_DIR$/sample_users_successful.json" />
+        <option value="$PROJECT_DIR$/sample_users_errors.json" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -384,32 +382,14 @@
               <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
               <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="readers" type="462c0819:PsiDirectoryNode" />
+              <item name="writers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
               <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="writers" type="462c0819:PsiDirectoryNode" />
+              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
@@ -421,24 +401,6 @@
               <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataimporter" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dataimporter" type="b2602c69:ProjectViewProjectNode" />
@@ -564,7 +526,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50684000" />
+    <option name="totallyTimeSpent" value="51263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -616,13 +578,6 @@
     <SUITE FILE_PATH="coverage/dataimporter$JsonWriterTest.xml" NAME="JsonWriterTest Coverage Results" MODIFIED="1573470388988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/readers/FileReaderInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/pcre/pcre.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -717,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/ValidatorInterace.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/stubs/Validator.php" />
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Validator.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -756,20 +704,6 @@
           <folding>
             <element signature="e#30#64#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-229">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -907,35 +841,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/readers/CsvFileReader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="400">
-            <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/User.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -960,6 +867,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sample_users_successful.json">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/ValidatorInterace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/readers/CsvFileReader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/AbstractJsonableObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Json/JsonableObjects/JsonableObjectInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="61" selection-start-line="61" selection-end-line="63" selection-end-column="90" />
+          <folding>
+            <element signature="e#40#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_users_errors.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="440">
+            <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

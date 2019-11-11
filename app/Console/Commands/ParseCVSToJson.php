@@ -58,8 +58,10 @@ class ParseCVSToJson extends Command
             $jsonWriter->write();
             $this->info("Total successful inserts " . $jsonWriter->getSuccessfulInsertCount());
             $this->info("Total errors " . $jsonWriter->getUnsuccessfulInsert());
-            $this->info("Please see " . $jsonWriter->getSuccessfulOutputFileName());
-            $this->info("Total errors " . $jsonWriter->getUnsuccessfulInsert());
+
+            $this->info("\n===================================Rows that had erros====================\n");
+            $this->info(file_get_contents($jsonWriter->getErrorsOutputFileName()));
+            $this->info("\n===================================End====================\n");
         } catch (\Exception $e) {
             $this->error("Woops something went wrong while parsing the file");
         }
