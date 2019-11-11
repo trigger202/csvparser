@@ -1,19 +1,13 @@
 <?php
 
-namespace App\readers;
+
+namespace App\Json\JsonableObjects;
+
 
 use Illuminate\Support\Facades\Validator;
 
-class User
+abstract class AbstractJsonableObject implements JsonableObjectInterface
 {
-    private $rules = [
-        'first_name' => 'required|string',
-        'last_name' => 'required|string',
-        'email' => 'required|string',
-        'password' => 'required|string|min:8',
-        'Platforms' => 'in:ios,windows,android,web',
-    ];
-
     /**@var array */
     private $data;
     /**
@@ -25,23 +19,44 @@ class User
     {
         $this->data = $this->convertToSnakeCase($data);
 
-        $this->validator = Validator::make($this->data, $this->rules);
+        $this->validator = Validator::make($this->data, $this->setRules());
+    }
+
+    /**
+     * @return string
+     */
+    public function toJson()
+    {
+        return json_encode($this->data);
     }
 
     /**
      * @return array
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * @return array
+     */
+    abstract public function setRules();
+
+
+    /**
+     * @return bool
      */
     public function validate()
     {
-        return $this->validator->validate();
-    }
+        try {
+            $this->validator->validate();
+            return true;
+        } catch (\Exception $e) {
+            return false;
+        }
 
-    /**
-     * @return array
-     */
-    public function getData(): array
-    {
-        return $this->data;
+        return false;
     }
 
     public function convertToSnakeCase($data)
@@ -52,10 +67,5 @@ class User
             $snakeCaseData[$key] = $value;
         }
         return $snakeCaseData;
-    }
-
-    public function toJson()
-    {
-        return json_encode($this->data);
     }
 }

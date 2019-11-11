@@ -2,8 +2,8 @@
 
 namespace App\writers;
 
-use App\readers\User;
-use Illuminate\Validation\ValidationException;
+use App\Json\JsonableObjects\JsonableObjectFactory;
+use App\writers\Exceptions\JsonFileWriterException;
 
 class JsonWriter implements FileWriterInterface
 {
@@ -12,14 +12,23 @@ class JsonWriter implements FileWriterInterface
     private $data;
     private $successfulInsertCount = 0;
     private $unsuccessFulInsertCount = 0;
+    private $className;
+    /**
+     * @var JsonableObjectFactory
+     */
+    private $factory;
 
     /**
      * JsonWriter constructor.
      * @param array $data
+     * @param $className
+     * @param JsonableObjectFactory $factory
      */
-    public function __construct(array $data)
+    public function __construct(array $data, $className, JsonableObjectFactory $factory)
     {
         $this->data = $data;
+        $this->className = $className;
+        $this->factory = $factory;
     }
 
     /**
@@ -60,21 +69,18 @@ class JsonWriter implements FileWriterInterface
 
     public function write()
     {
-        $validDataFile = fopen($this->getSuccessfulOutputFileName(), "a");
-        $inValidDataFile = fopen($this->getErrorsOutputFileName(), "a");
+        $validDataFile = fopen($this->getSuccessfulOutputFileName(), "a+");
+        $inValidDataFile = fopen($this->getErrorsOutputFileName(), "a+");
 
         try {
             foreach ($this->data as $row) {
-                try {
-
-                    $user = new User($row);
-                    $isValid = $user->validate();
-                    if ($isValid) {
-                        fwrite($validDataFile, $user->toJson());
-                        $this->successfulInsertCount++;
-                    }
-                } catch (ValidationException  $e) {
-                    fwrite($inValidDataFile, $user->toJson());
+                $jsonableObject = $this->factory->create($this->className, $row);
+                if ($jsonableObject->validate()) {
+                    fwrite($validDataFile, $jsonableObject->toJson());
+                    $this->successfulInsertCount++;
+                } else {
+                    fwrite($inValidDataFile, implode(', ', $row));
+                    fwrite($inValidDataFile, PHP_EOL);
                     $this->unsuccessFulInsertCount++;
                 }
             }
@@ -92,7 +98,8 @@ class JsonWriter implements FileWriterInterface
     /**
      * @return int
      */
-    public function getSuccessfulInsertCount(): int
+    public
+    function getSuccessfulInsertCount(): int
     {
         return $this->successfulInsertCount;
     }
@@ -100,7 +107,8 @@ class JsonWriter implements FileWriterInterface
     /**
      * @param int
      */
-    public function getUnsuccessfulInsert()
+    public
+    function getUnsuccessfulInsert()
     {
         $this->unsuccessFulInsertCount;
     }
