@@ -6,7 +6,7 @@ class User extends AbstractJsonableObject
 {
 
     /**@inheritDoc */
-    public function setRules()
+    public function rules()
     {
         return [
             'first_name' => 'required|string',

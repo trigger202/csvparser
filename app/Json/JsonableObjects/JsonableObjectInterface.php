@@ -14,7 +14,7 @@ interface JsonableObjectInterface
     /**
      * @return array
      */
-    public function setRules();
+    public function rules();
 
     /**
      * @return bool

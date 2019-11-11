@@ -18,8 +18,15 @@ abstract class AbstractJsonableObject implements JsonableObjectInterface
     public function __construct(array $data)
     {
         $this->data = $this->convertToSnakeCase($data);
+        $this->validator = Validator::make($this->data, $this->rules());
+    }
 
-        $this->validator = Validator::make($this->data, $this->setRules());
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return $this->data;
     }
 
     /**
@@ -33,16 +40,7 @@ abstract class AbstractJsonableObject implements JsonableObjectInterface
     /**
      * @return array
      */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    /**
-     * @return array
-     */
-    abstract public function setRules();
-
+    abstract public function rules();
 
     /**
      * @return bool

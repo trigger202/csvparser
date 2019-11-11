@@ -9,7 +9,7 @@ class Profile extends AbstractJsonableObject
     /**
      * @return array
      */
-    public function setRules()
+    public function rules()
     {
         return [
             'age' => 'required|int',
