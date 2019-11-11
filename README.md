@@ -8,9 +8,8 @@
 1. Clone project
 2. cd into project
 3. run ``composer install``
-4. run ``php artisan serve``
-5. run ``php artisan csv:json``
-6. Done
+4. run ``php artisan csv:json``
+5. Done
 
 # Code to review location
 I have created the following folders under app/

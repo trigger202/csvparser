@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="22c74765-05e0-4647-8e42-deaf3a478205" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ParseCVSToJson.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Json/JsonableObjects/ValidatorInterace.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_users_errors.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_users_errors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_users_successful.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_users_successful.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +69,8 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="440">
-                    <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+                  <first_editor relative-caret-position="220">
+                    <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -526,7 +522,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51263000" />
+    <option name="totallyTimeSpent" value="51758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -912,8 +908,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="440">
-            <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <first_editor relative-caret-position="220">
+            <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           </first_editor>
           <second_editor />
         </state>
