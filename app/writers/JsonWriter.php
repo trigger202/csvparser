@@ -109,4 +109,9 @@ class JsonWriter implements FileWriterInterface
     {
         return $this->unsuccessFulInsertCount;
     }
+
+    public function uncoveredFunction(): void
+    {
+        echo "no test";
+    }
 }
